@@ -15,7 +15,7 @@
       package: name=libtool state=present
     - name: Ensure libusb-dev is installed.
       package: name=libusb-dev state=present
-      
+
   tasks:
-    - include_tasks: tasks/boot-config.yml
+    #- include_tasks: tasks/boot-config.yml
     - include_tasks: tasks/openocd.yml
