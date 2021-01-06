@@ -8,12 +8,12 @@
 
 - name: OpenOCD Install - Bootstrap
   command: bootstrap
-    chdir: /home/pi/openocd-code
+  chdir: /home/pi/openocd-code
   become: false
 
 - name: OpenOCD Install - Configure
   command: configure --enable-bcm2835gpio --enable-cmsis-dap --enable-sysfsgpio
-    chdir: /home/pi/openocd-code
+  chdir: /home/pi/openocd-code
   become: false
 
 - name: Build Open-OCD.
