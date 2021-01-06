@@ -7,6 +7,9 @@
     - config.yml
 
   pre_tasks:
+    - name: Run the equivalent of "apt-get update" as a separate step
+      apt:
+        update_cache: yes
     - name: Ensure git is installed.
       package: name=git state=present
     - name: Ensure autoconf  is installed.
@@ -15,6 +18,17 @@
       package: name=libtool state=present
     - name: Ensure libusb-dev is installed.
       package: name=libusb-dev state=present
+    - name: Ensure make is installed.
+      package: name=make state=present
+    - name: Ensure pkg-config is installed.
+      package: name=pkg-config state=present
+    - name: Upgrade the OS (apt-get dist-upgrade)
+      apt:
+        upgrade: dist
+    - name: Update all packages to their latest version
+      apt:
+        name: "*"
+        state: latest
 
   tasks:
     - include_tasks: tasks/boot-config.yml
