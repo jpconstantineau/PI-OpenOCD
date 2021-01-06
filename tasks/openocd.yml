@@ -28,4 +28,3 @@
     chdir: /home/pi/openocd-code
     target: install
   become: true
-  
