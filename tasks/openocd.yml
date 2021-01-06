@@ -7,13 +7,13 @@
   become: false
 
 - name: OpenOCD Install - Bootstrap
-  command: bootstrap
+  command: ./bootstrap
   args:
     chdir: /home/pi/openocd-code
   become: false
 
 - name: OpenOCD Install - Configure
-  command: configure --enable-bcm2835gpio --enable-cmsis-dap --enable-sysfsgpio
+  command: ./configure --enable-bcm2835gpio --enable-cmsis-dap --enable-sysfsgpio
   args:
     chdir: /home/pi/openocd-code
   become: false
