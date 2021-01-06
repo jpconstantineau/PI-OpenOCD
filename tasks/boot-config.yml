@@ -1,0 +1,11 @@
+---
+- name: Make necessary changes in config.txt
+  ini_file:
+    path: /boot/config.txt
+    no_extra_spaces: true
+    section: all
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    mode: 0755
+    backup: false
+  with_items: '{{ config_txt_changes }}'

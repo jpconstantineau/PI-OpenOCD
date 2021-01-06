@@ -1,0 +1,21 @@
+---
+##
+# Common settings.
+##
+
+# TODO: See https://github.com/geerlingguy/pi-webcam/issues/4
+
+##
+# Less common settings.
+##
+
+# The repository from which uvc-gadget will be cloned. Note that if a different
+# fork of uvc-gadget is used, some of the configuration may need to be disabled.
+openocd_repo: git://git.code.sf.net/p/openocd/code
+openocd_repo_version: master
+
+# Changes to be made to the config.txt file.
+config_txt_changes:
+  # Ensure GPU has enough memory for camera.
+  - option: gpu_mem
+    value: '128'

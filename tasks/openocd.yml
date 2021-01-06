@@ -1,0 +1,27 @@
+---
+- name: Clone OpenOCD to the Pi.
+  git:
+    repo: "{{ openocd_repo }}"
+    dest: /home/pi/openocd-code
+    version: "{{ openocd_repo_version }}"
+  become: false
+
+- name: OpenOCD Install - Bootstrap
+  command: /home/pi/openocd-code/bootstrap
+  become: false
+
+- name: OpenOCD Install - Configure
+  command: /home/pi/openocd-code/configure --enable-bcm2835gpio --enable-cmsis-dap --enable-sysfsgpio
+  become: false
+
+- name: Build Open-OCD.
+  make:
+    chdir: /home/pi/openocd-code
+  become: false
+
+- name: Install Open-OCD.
+  make:
+    chdir: /home/pi/openocd-code
+    target: install
+  become: true
+  
