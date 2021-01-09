@@ -52,7 +52,7 @@ There are two ways you can run this automated setup. You can either run everythi
 
 If you want, and you still have WiFi enabled, or the Pi is otherwise connected to your network, you can log into it via SSH and run `sudo shutdown now` to power it off cleanly.
 
-But I like living on the edge... it's not like the thing is writing a ton of data to the microSD card. When I'm finished using it as a webcam, I just unplug it. Simple as that.
+But I like living on the edge... it's not like the thing is writing a ton of data to the microSD card. When I'm finished using it, I just unplug it. Simple as that.
 
 If, for some strange reason, it did end up getting corrupted, I could just re-run this automation to set it up again. No big deal! I haven't had that happen yet, though.
 
@@ -63,6 +63,17 @@ If, for some strange reason, it did end up getting corrupted, I could just re-ru
 MIT.
 
 This project was inspired from [Jeff Geerling's Pi Webcam Project](https://github.com/geerlingguy/pi-webcam).
+
+## References
+
+[CircuitPython nRF52840-dongle OpenOCD Pi Tutorial](https://www.rototron.info/circuitpython-nrf52840-dongle-openocd-pi-tutorial/)
+
+[Using OpenOCD with the nRF52 (Bluetooth 5 SoC)](https://4k2.de/microcontroller/openocd-flashing-nrf52/)
+
+[OpenOCD and the Pi4](https://www.raspberrypi.org/forums/viewtopic.php?t=252551)
+
+[OpenOCD on Raspberry Pi: Better with SWD on SPI](https://www.pcbway.com/blog/technology/OpenOCD_on_Raspberry_Pi__Better_with_SWD_on_SPI.html)
+
 
 ## Author
 
